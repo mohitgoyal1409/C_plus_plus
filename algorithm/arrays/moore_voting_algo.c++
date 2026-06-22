@@ -26,5 +26,5 @@ int main() {
             count--;
         }
     }
-    cout<<element;
+    cout<<element; 
 }

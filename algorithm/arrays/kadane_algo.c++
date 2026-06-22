@@ -10,27 +10,21 @@ int main() {
         int x;
         cin >> x;
         arr.push_back(x);
-    }
-     
-    int low = 0;
-    int high = n-1;
-    int mid = 0;
-   
-    while(mid <= high) {
-        if(arr[mid] == 0) {
-            swap(arr[low], arr[mid]);
-            low++;
-            mid++;
-        } else if(arr[mid] == 1) {
-            mid++;
-        } else {
-            swap(arr[mid], arr[high]);
-            high--;
+    } 
+
+    int maxSum = 0;
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += arr[i];
+        if (maxSum < sum) {
+            maxSum = sum;
+        }
+        if (sum < 0) {
+            sum = 0;
         }
     }
 
-    for(int x : arr)
-        cout << x << " ";
+    cout << "Maximum sum of a subarray is: " << maxSum;
     
 
     return 0;
