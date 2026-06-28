@@ -6,7 +6,7 @@ int main() {
    
     string s = "banana";
 
-    vector<int> buildSuffixArray(string s);
+    // vector<int> buildSuffixArray(string s);
 
     int n = s.size();
 
